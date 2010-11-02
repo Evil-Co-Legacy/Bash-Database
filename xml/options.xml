@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "http://www.woltlab.com/DTDs/options.dtd">
+<data>
+	<import>
+		<categories>
+			<category name="message"></category>
+			<category name="message.bash">
+				<parent>message</parent>
+				<showorder>1</showorder>
+			</category>
+			<category name="message.comment">
+				<parent>message</parent>
+				<showorder>2</showorder>
+			</category>
+		</categories>
+		<options>
+			<option name="offline">
+				<categoryname>general.offline</categoryname>
+				<optiontype>boolean</optiontype>
+				<enableoptions>offline_message</enableoptions>
+				<showorder>1</showorder>
+			</option>
+			<option name="offline_message">
+				<categoryname>general.offline</categoryname>
+				<optiontype>textarea</optiontype>
+				<showorder>2</showorder>
+			</option>
+			<option name="offline_message_allow_html">
+				<categoryname>general.offline</categoryname>
+				<optiontype>boolean</optiontype>
+				<showorder>3</showorder>
+			</option>
+			
+			<!-- message options -->
+			<option name="bash_user_activity_points">
+				<categoryname>message.bash</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>10</defaultvalue>
+				<showorder>1</showorder>
+			</option>
+			<option name="server_comment_user_activity_points">
+				<categoryname>message.comment</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>5</defaultvalue>
+				<showorder>1</showorder>
+			</option>
+		</options>
+	</import>
+</data>

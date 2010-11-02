@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.woltlab.com/XSD/group-options.xsd">
+	<import>
+		<categories>
+			<category name="user.bash">
+				<parent>user</parent>
+			</category>
+			<category name="user.comment">
+				<parent>user</parent>
+			</category>
+			<category name="mod.bash">
+				<parent>mod</parent>
+			</category>
+			<category name="mod.comment">
+				<parent>mod</parent>
+			</category>
+			<category name="admin.bash">
+				<parent>admin.content</parent>
+				<showorder>1</showorder>
+			</category>
+		</categories>
+
+		<options>
+			<!-- user.bash -->
+			<option name="user.bash.canViewBASHOffline">
+				<categoryname>user.bash</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+			
+			<option name="user.bash.canAddBashEntry">
+				<categoryname>user.bash</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+			
+			<!-- user.comment -->
+			<option name="user.comment.canAddComment">
+				<categoryname>user.comment</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+
+			<!-- mod.bash -->
+			<option name="mod.bash.moderatorPermissions">
+				<categoryname>mod.bash</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+			<option name="mod.bash.canAddNewsEntries">
+				<categoryname>mod.bash</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+			<option name="mod.bash.canEditNewsEntries">
+				<categoryname>mod.bash</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+			<option name="mod.bash.canDeleteNewsEntries">
+				<categoryname>mod.bash</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+			
+			<!-- mod.comment -->
+			<option name="mod.comment.moderatorPermissions">
+				<categoryname>mod.comment</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+			
+			<!-- admin.bash -->
+			<option name="admin.bash.canAddServers">
+				<categoryname>admin.bash</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+			<option name="admin.bash.canDeleteServers">
+				<categoryname>admin.bash</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+		</options>
+	</import>
+</data>

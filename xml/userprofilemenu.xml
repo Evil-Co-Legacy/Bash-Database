@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE data SYSTEM "http://www.woltlab.com/DTDs/userProfileMenu.dtd">
+<data>	
+	<import>
+		<userprofilemenuitem name="wcf.user.profile.menu.link.bash.favorites">
+			<link>index.php?page=UserFavorites&amp;userID=%s</link>			
+			<icon>favoritesM.png</icon>
+		</userprofilemenuitem>
+		<userprofilemenuitem name="wcf.user.profile.menu.link.bash.ownEntries">
+			<link>index.php?page=UserBashEntries&amp;userID=%s</link>		
+			<icon>indexM.png</icon>	
+		</userprofilemenuitem>				
+	</import>
+</data>

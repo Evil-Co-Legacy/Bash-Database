@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE package SYSTEM "http://www.woltlab.com/DTDs/package.dtd">
+<package name="net.punksoft.bash">
+	<packageinformation>
+		<packagename><![CDATA[Punk Bash]]></packagename>
+		<packagedescription><![CDATA[]]>
+		</packagedescription>
+		<standalone>1</standalone>
+		<version>2.0.0</version>
+		<date>2010-05-30</date>
+	</packageinformation>
+
+	<authorinformation>
+		<author><![CDATA[Punksoft]]></author>
+		<authorurl><![CDATA[http://www.Punksoft.net/]]></authorurl>
+	</authorinformation>
+
+	<requiredpackages>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf</requiredpackage>
+
+		<!-- basics -->
+		<requiredpackage minversion="1.1.2">com.woltlab.wcf.data.cronjobs</requiredpackage>
+		<requiredpackage minversion="1.0.3">com.woltlab.wcf.data.feed.reader</requiredpackage>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.data.image</requiredpackage>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.data.image.captcha</requiredpackage>
+		<requiredpackage minversion="1.0.1">com.woltlab.wcf.imageViewer</requiredpackage>
+
+		<!-- page system -->
+		<requiredpackage minversion="1.1.1">com.woltlab.wcf.data.page.headerMenu</requiredpackage>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.system.style</requiredpackage>
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.data.page</requiredpackage>
+		<requiredpackage minversion="1.1.1">com.woltlab.wcf.data.help</requiredpackage>
+
+		<!-- message -->
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.data.message</requiredpackage>
+		<requiredpackage minversion="1.1.2">com.woltlab.wcf.data.message.attachment</requiredpackage>
+		<requiredpackage minversion="1.1.1">com.woltlab.wcf.data.message.bbcode</requiredpackage>
+		<requiredpackage minversion="1.1.2">com.woltlab.wcf.form.message.wysiwyg</requiredpackage>
+		<requiredpackage minversion="1.0.1">com.woltlab.wcf.tagging</requiredpackage>
+
+		<!-- user profile -->
+		<requiredpackage minversion="1.1.2">com.woltlab.wcf.form.user</requiredpackage>
+		<requiredpackage minversion="1.1.2">com.woltlab.wcf.page.user.profile</requiredpackage>
+
+		<!-- messages -->
+		<requiredpackage minversion="1.1.0">com.woltlab.wcf.data.message.censorship</requiredpackage>
+		<requiredpackage minversion="1.1.2">com.woltlab.wcf.form.message</requiredpackage>
+		<requiredpackage minversion="1.1.1">com.woltlab.wcf.data.message.search</requiredpackage>
+		<requiredpackage minversion="1.0.0">com.woltlab.wcf.data.message.search.tagging</requiredpackage>
+		<requiredpackage minversion="1.0.1">com.woltlab.wcf.message.sidebar</requiredpackage>
+	</requiredpackages>
+
+	<instructions type="install">
+		<!-- File-PiPs -->
+		<files>tar/files.tar</files>
+		<templates>tar/templates.tar</templates>
+		<acptemplates>tar/acptemplates.tar</acptemplates>
+
+		<!-- XML PiPs -->
+		<options>xml/options.xml</options>
+		<acpmenu>xml/acpmenu.xml</acpmenu>
+		<pagemenu>xml/pagemenu.xml</pagemenu>
+		<usercpmenu>xml/usercpmenu.xml</usercpmenu>
+		<groupoptions>xml/groupoptions.xml</groupoptions>
+		<userprofilemenu>xml/userprofilemenu.xml</userprofilemenu>
+		
+
+		<!-- Other PiPs -->
+		<sql>install.sql</sql>
+		<style default="true">tar/antarctica-bulletin-board-no-logo-style.tgz</style>
+
+		<!-- Languages -->
+		<languages languagecode="de">xml/language/de.xml</languages>
+	</instructions>
+</package>

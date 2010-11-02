@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.woltlab.com/XSD/page-menu.xsd">
+	<import>
+		<pagemenuitem name="bash.header.menu.index">
+			<iconmedium>indexM.png</iconmedium>
+			<iconsmall>indexS.png</iconsmall>
+			<link>index.php?page=Index</link>
+			<showorder>1</showorder>
+			<position>header</position>
+		</pagemenuitem>
+		<pagemenuitem name="bash.header.menu.random">
+			<iconmedium>randomM.png</iconmedium>
+			<iconsmall>randomS.png</iconsmall>
+			<link>index.php?page=Random</link>
+			<showorder>2</showorder>
+			<position>header</position>
+		</pagemenuitem>
+		<pagemenuitem name="bash.header.menu.addBash">
+			<iconmedium>messageAddM.png</iconmedium>
+			<iconsmall>messageAddS.png</iconsmall>
+			<link>index.php?form=BashEntryAdd</link>
+			<position>header</position>
+			<permissions>user.bash.canAddBashEntry</permissions>
+		</pagemenuitem>
+	</import>
+</data>

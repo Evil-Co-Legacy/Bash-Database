@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.woltlab.com/XSD/usercp-menu.xsd">
+	<import>
+		<usercpmenuitem name="wcf.user.usercp.menu.link.management">
+			<icon>managementM.png</icon>
+			<link>index.php?page=FavoriteList</link>
+			<showorder>3</showorder>
+		</usercpmenuitem>
+
+		<usercpmenuitem name="wcf.user.usercp.menu.link.management.favorites">
+			<link>index.php?page=FavoriteList</link>
+			<parent>wcf.user.usercp.menu.link.management</parent>
+			<showorder>1</showorder>
+		</usercpmenuitem>
+
+		<usercpmenuitem name="wcf.user.usercp.menu.link.modcp">
+			<link>index.php?page=ModerationOverview</link>
+			<icon>moderatorM.png</icon>
+			<showorder>4</showorder>
+			<permissions>mod.bash.moderatorPermissions</permissions>
+		</usercpmenuitem>
+
+		<usercpmenuitem name="wcf.user.usercp.menu.link.modcp.overview">
+			<link>index.php?page=ModerationOverview</link>
+			<parent>wcf.user.usercp.menu.link.modcp</parent>
+			<permissions>mod.bash.moderatorPermissions</permissions>
+		</usercpmenuitem>
+
+		<usercpmenuitem name="wcf.user.usercp.menu.link.modcp.disabledEntries">
+			<link>index.php?page=ModerationDisabledEntries</link>
+			<parent>wcf.user.usercp.menu.link.modcp</parent>
+			<permissions>mod.bash.moderatorPermissions</permissions>
+		</usercpmenuitem>
+		
+		<usercpmenuitem name="wcf.user.usercp.menu.link.modcp.disabledComments">
+			<link>index.php?page=ModerationDisabledComments</link>
+			<parent>wcf.user.usercp.menu.link.modcp</parent>
+			<permissions>mod.comment.moderatorPermissions</permissions>
+		</usercpmenuitem>
+	</import>
+</data>

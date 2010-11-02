@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/acp-menu.xsd">
+	<import>
+		<acpmenuitem name="bash.acp.menu.link.content.servers">
+			<parent>wcf.acp.menu.link.content</parent>
+			<showorder>1</showorder>
+		</acpmenuitem>
+		<acpmenuitem name="bash.acp.menu.link.content.servers.list">
+			<parent>bash.acp.menu.link.content.servers</parent>
+			<showorder>1</showorder>
+			<link>index.php?page=ServerList</link>
+		</acpmenuitem>
+		<acpmenuitem name="bash.acp.menu.link.content.servers.add">
+			<parent>bash.acp.menu.link.content.servers</parent>
+			<showorder>2</showorder>
+			<link>index.php?form=ServerAdd</link>
+			<permissions>admin.bash.canAddServers</permissions>
+		</acpmenuitem>
+	</import>
+</data>
