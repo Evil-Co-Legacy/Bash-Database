@@ -127,7 +127,7 @@
 	<!-- Options -->
 	<category name="wcf.acp.option">
 		<item name="wcf.acp.option.offline"><![CDATA[Wartungsmodus aktivieren]]></item>
-		<item name="wcf.acp.option.offline.description"><![CDATA[Wenn diese Option aktiviert ist, kann die Anwendung nur berechtigte Nutzer verwendet werden. Alle anderen Nutzer erhalten eine Warnmeldung mit dem unten definierten Text.]]></item>
+		<item name="wcf.acp.option.offline.description"><![CDATA[Wenn diese Option aktiviert ist, kann die Anwendung nur durch berechtigte Nutzer verwendet werden. Alle anderen Nutzer erhalten eine Warnmeldung mit dem unten definierten Text.]]></item>
 		<item name="wcf.acp.option.offline_message"><![CDATA[Nachricht]]></item>
 		<item name="wcf.acp.option.offline_message.description"><![CDATA[Diese Nachricht wird während der verwendung der Anwendung im Wartungsmodus angezeigt]]></item>
 		<item name="wcf.acp.option.offline_message_allow_html"><![CDATA[HTML aktivieren]]></item>
