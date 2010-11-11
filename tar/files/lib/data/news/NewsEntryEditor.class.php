@@ -78,6 +78,13 @@ class NewsEntryEditor extends NewsEntry {
 			$updateSQL .= '`text` = \''.escapeString($this->text).'\'';
 		}
 		
+		if (!empty($updateSQL)) $updateSQL .= ',';
+		$updateSQL .= "`enableSmilies` = ".($this->enableSmilies ? 1 : 0);
+		
+		$updateSQL .= ",`enableHTML` = ".($this->enableHTML ? 1 : 0);
+		
+		$updateSQL .= ",`enableBBCodes` = ".($this->enableBBCodes ? 1 : 0);
+		
 		$sql = "UPDATE bash".BASH_N."_news
 				SET
 					".$updateSQL."
