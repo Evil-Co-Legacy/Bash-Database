@@ -214,7 +214,7 @@
 		
 		<div class="formElement">
 			<p class="formFieldLabel">{lang}bash.acp.index.credits.developedBy{/lang}</p>
-			<p class="formField"><a href="{@RELATIVE_WCF_DIR}acp/dereferrer.php?url={"http://www.punksoft.net/"|rawurlencode}" class="externalURL">Punksoft</a></p>
+			<p class="formField"><a href="{@RELATIVE_WCF_DIR}acp/dereferrer.php?url={"http://www.evil-co.de/"|rawurlencode}" class="externalURL">Evil-Co.de</a></p>
 		</div>	
 		<div class="formElement">
 			<p class="formFieldLabel">{lang}bash.acp.index.credits.productManager{/lang}</p>
@@ -230,7 +230,7 @@
 		</div>	
 		<div class="formElement" style="margin-top: 10px">
 			<p class="formFieldLabel"></p>
-			<p class="formField">Copyright &copy; 2010 Punksoft</p>
+			<p class="formField">Copyright &copy; 2010 Evil-Co.de</p>
 		</div>
 	</div>
 </div>
