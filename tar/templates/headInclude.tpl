@@ -14,6 +14,7 @@
 <script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/default.js"></script>
 <script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/PopupMenuList.class.js"></script>
 <script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/AjaxRequest.class.js"></script>
+<script type="text/javascript" src="{@RELATIVE_WCF_DIR}js/BashEntryEditor.class.js"></script>
 
 <!-- wbb styles -->
 <link rel="stylesheet" type="text/css" media="screen" href="{@RELATIVE_BASH_DIR}style/bash.css" />
