@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "http://www.woltlab.com/DTDs/language.dtd">
+<language languagecode="en">
+	<!-- Global variables -->
+	<category name="bash.global">
+		<item name="bash.global.offline"><![CDATA[&raquo;{PAGE_TITLE}&laquo; is offline for the following reason(s):]]></item>
+
+		<item name="bash.global.permalink"><![CDATA[Permlink for entry {#$entry->entryID}]]></item>
+
+		<item name="bash.global.changeStyle"><![CDATA[Cahnge style]]></item>
+		<item name="bash.global.copyright"><![CDATA[<a href="http://www.evil-co.de/"><strong>Databasesoftware:</strong> Bash Database {PACKAGE_VERSION} developed by Evil-Co.de</a>]]></item>
+	</category>
+
+	<!-- Bash entry variables -->
+	<category name="bash.entry">
+		<item name="bash.entry.entry"><![CDATA[Entry #{#$entry->entryID}]]></item>
+		<item name="bash.entry.favoriteEntry"><![CDATA[Favorite entry (#{#$entry->entryID}]]></item>
+		<item name="bash.entry.favorite"><![CDATA[Bookmark]]></item>
+		<item name="bash.entry.unfavorite"><![CDATA[Remove from favorites]]></item>
+		<item name="bash.entry.toggle.enable"><![CDATA[Enable]]></item>
+		<item name="bash.entry.toggle.disable"><![CDATA[Disable]]></item>
+		<item name="bash.entry.vote.positive"><![CDATA[Vote positive for this entry!]]></item>
+		<item name="bash.entry.vote.negative"><![CDATA[Vote negative for this entry!]]></item>
+		<item name="bash.entry.delete"><![CDATA[Delete]]></item>
+		<item name="bash.entry.delete.confirm"><![CDATA[Are you sure?]]></item>
+		<item name="bash.entry.add"><![CDATA[Add a new entry]]></item>
+	</category>
+	
+	<!-- Server comment variables -->
+	<category name="bash.comment">
+		<item name="bash.comment.delete"><![CDATA[Delete]]></item>
+		<item name="bash.comment.delete.confirm"><![CDATA[Are you sure?]]></item>
+		<item name="bash.comment.toggle.enable"><![CDATA[Enable]]></item>
+		<item name="bash.comment.toggle.disable"><![CDATA[Disable]]></item>
+		<item name="bash.comment.add"><![CDATA[Comment]]></item>
+	</category>
+
+	<!-- Frontend header -->
+	<category name="bash.header">
+		<item name="bash.header.userNote.user"><![CDATA[Logged in as <a href="index.php?page=User&userID={$this->user->userID}">{$this->user->username}</a>.]]></item>
+		<item name="bash.header.userNote.guest"><![CDATA[You aren't logged in.]]></item>
+
+		<item name="bash.header.userMenu.logout"><![CDATA[Logout]]></item>
+		<item name="bash.header.userMenu.profile"><![CDATA[Edit profile]]></item>
+		<item name="bash.header.userMenu.favorites"><![CDATA[Favorites]]></item>
+		<item name="bash.header.userMenu.moderation"><![CDATA[Moderation]]></item>
+		<item name="bash.header.userMenu.acp"><![CDATA[Administration]]></item>
+		<item name="bash.header.userMenu.login"><![CDATA[Login]]></item>
+		<item name="bash.header.login.useCookies"><![CDATA[Remember me?]]></item>
+		<item name="bash.header.userMenu.register"><![CDATA[Register]]></item>
+		<item name="bash.header.userMenu.changeLanguage"><![CDATA[Change language]]></item>
+
+		<item name="bash.header.search.query"><![CDATA[Search]]></item>
+		<item name="bash.search.entriesOfTheLast24Hours"><![CDATA[Entries of the last 24 hours]]></item>
+		<item name="bash.header.search.extended"><![CDATA[Advanced search]]></item>
+
+		<item name="bash.header.welcomeBack"><![CDATA[Welcome back {$this->user->username}!]]></item>
+
+		<!-- Page menu items -->
+		<item name="bash.header.menu.index"><![CDATA[Index]]></item>
+		<item name="bash.header.menu.random"><![CDATA[Random]]></item>
+		<item name="bash.header.menu.addBash"><![CDATA[Add quote]]></item>
+	</category>
+
+	<!-- Pages -->
+	<category name="bash.page.index">
+		<item name="bash.page.index.title"><![CDATA[News]]></item>
+		<item name="bash.page.index.noEntries"><![CDATA[There are no news.]]></item>
+		<item name="bash.page.index.add"><![CDATA[Add news entry]]></item>
+		<item name="bash.page.index.delete"><![CDATA[Delete]]></item>
+		<item name="bash.page.index.editNewsEntry"><![CDATA[Edit]]></item>
+	</category>
+
+	<category name="bash.page.random">
+		<item name="bash.page.random.title"><![CDATA[Random entries]]></item>
+		<item name="bash.page.random.messageHeader"><![CDATA[Netzwerk: {if $entry->serverID > 0}<a href="index.php?page=ServerDetail&serverID={$entry->serverID}">{$entry->serverName}</a>{else}{$entry->serverName}{/if} - Bewertung: {#$entry->votes} - {@$entry->timestamp|time}]]></item>
+		<item name="bash.page.random.noEntries"><![CDATA[Huch?! Wieso sind hier keine Einträge?! Versuchs später nochmal ;-)]]></item> <!-- Little easteregg -->
+	</category>
+
+	<category name="bash.page.bash">
+		<item name="bash.page.bash.title"><![CDATA[Entry #{#$entry->entryID}]]></item>
+		<item name="bash.page.bash.disabledInfo"><![CDATA[The entry is disabled until a moderator checked this entry. If a entry disappears it was eaten by the moderator that checked it.]]></item>
+	</category>
+
+	<category name="bash.page.favoriteList">
+		<item name="bash.page.favoriteList.title"><![CDATA[Favorites]]></item>
+		<item name="bash.page.favoriteList.noFavorites"><![CDATA[You haven't added favorites ...]]></item>
+	</category>
+
+	<category name="bash.page.serverDetail">
+		<item name="bash.page.serverDetail.title"><![CDATA[Details of &raquo;{$server->serverAddress}&laquo;]]></item>
+		<item name="bash.page.serverDetail.serverAddress"><![CDATA[Adress]]></item>
+		<item name="bash.page.serverDetail.description"><![CDATA[Description]]></item>
+		<item name="bash.page.serverDetails.comments"><![CDATA[Comments]]></item>
+		<item name="bash.page.serverDetail.messageHeader"><![CDATA[{@$comment->timestamp|time}]]></item>
+		<item name="bash.page.serverDetails.comments.noComments"><![CDATA[There are no comments for this server.]]></item>
+	</category>
+	
+	<category name="bash.page.serverCommentAdd">
+		<item name="bash.page.serverCommentAdd.information"><![CDATA[Information]]></item>
+		<item name="bash.page.serverCommentAdd.text"><![CDATA[Text]]></item>
+	</category>
+	
+	<category name="bash.page.bashEntryAdd">
+		<item name="bash.page.bashEntryAdd.information"><![CDATA[Information]]></item>
+		<item name="bash.page.bashEntryAdd.serverID"><![CDATA[Server]]></item>
+		<item name="bash.page.bashEntryAdd.serverID.own"><![CDATA[Custom Server]]></item>
+		<item name="bash.page.bashEntryAdd.serverName"><![CDATA[Server Adress]]></item>
+		<item name="bash.page.bashEntryAdd.text"><![CDATA[Quote]]></item>
+	</category>
+	
+	<category name="bash.page.newsAdd">
+		<item name="bash.page.newsAdd.information"><![CDATA[Information]]></item>
+		<item name="bash.page.newsAdd.subject"><![CDATA[Title]]></item>
+		<item name="bash.page.newsAdd.text"><![CDATA[Message]]></item>
+	</category>
+	
+	<category name="bash.page.newsEdit">
+		<item name="bash.page.newsEdit.title"><![CDATA[Edit]]></item>
+	</category>
+
+	<!-- ACP -->
+	<category name="bash.acp">
+		<item name="bash.acp.jumpToBASH"><![CDATA[Database]]></item>
+	</category>
+
+	<!-- Options -->
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.offline"><![CDATA[Disable Application]]></item>
+		<item name="wcf.acp.option.offline.description"><![CDATA[If this option is enabled no users have access to this application.]]></item>
+		<item name="wcf.acp.option.offline_message"><![CDATA[Message]]></item>
+		<item name="wcf.acp.option.offline_message.description"><![CDATA[This message will appear if the application is offline.]]></item>
+		<item name="wcf.acp.option.offline_message_allow_html"><![CDATA[Enable HTML]]></item>
+		<item name="wcf.acp.option.offline_message_allow_html.description"><![CDATA[If this option is enable HTML typed in message field will parsed.]]></item>
+		<item name="wcf.acp.option.category.message.bash"><![CDATA[Bash Entries]]></item>
+		<item name="wcf.acp.option.category.message.bash.description"><![CDATA[]]></item>
+		<item name="wcf.acp.option.bash_user_activity_points"><![CDATA[Activitypoints]]></item>
+		<item name="wcf.acp.option.bash_user_activity_points.description"><![CDATA[This amount of points will added to users account if he adds a bash entry.]]></item>
+		<item name="wcf.acp.option.category.message.comment"><![CDATA[Server Comments]]></item>
+		<item name="wcf.acp.option.category.message.comment.description"><![CDATA[]]></item>
+		<item name="wcf.acp.option.server_comment_user_activity_points"><![CDATA[Activitypoints]]></item>
+		<item name="wcf.acp.option.server_comment_user_activity_points.description"><![CDATA[This amount of points will added to users account if he adds a server comment]]></item>
+	</category>
+
+	<!-- User specific variables -->
+	<category name="bash.user">
+		<item name="bash.user.guestInfo"><![CDATA[You must <a href="index.php?form=UserLogin{SID_ARG_2ND}">Login</a> or <a href="index.php?form=Register{SID_ARG_2ND}">create a new account</a> to use all functions of this application!]]></item>
+		<item name="bash.user.favorites.title"><![CDATA[Favorites]]></item>
+		<item name="bash.user.favorites.noEntries"><![CDATA[This user haven't favorites.]]></item>
+		<item name="bash.user.entries.title"><![CDATA[Bash Entries]]></item>
+		<item name="bash.user.entries.noEntries"><![CDATA[This user haven't submitted quotes.]]></item>
+	</category>
+
+	<!-- Usercpmenu -->
+	<category name="wcf.user.usercp">
+		<item name="wcf.user.usercp.menu.link.management.favorites"><![CDATA[Favorites]]></item>
+		<item name="wcf.user.usercp.menu.link.modcp.overview"><![CDATA[Overview]]></item>
+		<item name="wcf.user.usercp.menu.link.modcp.disabledEntries"><![CDATA[Disabled entries]]></item>
+		<item name="wcf.user.usercp.menu.link.modcp.disabledComments"><![CDATA[Disabled comments]]></item>
+	</category>
+	
+	<!-- Moderation -->
+	<category name="bash.moderation">
+		<item name="bash.moderation.overview.title"><![CDATA[Overview]]></item>
+		<item name="bash.moderation.disabledEntries.title"><![CDATA[Disabled entries]]></item>
+		<item name="bash.moderation.disabledComments.title"><![CDATA[Disabled comments]]></item>
+		<item name="bash.moderation.disabledEntries.count"><![CDATA[{#$outstandingModerations.entries} disabled entr{if $outstandingModerations.entries == 1}ies{else}y{/if}]]></item>
+		<item name="bash.moderation.disabledComments.count"><![CDATA[{#$outstandingModerations.comments} disabled comment{if $outstandingModerations.comments > 1}s{/if}]]></item>
+		<item name="bash.moderation.disabledEntries.noEntries"><![CDATA[Currently there are no disabled entries.]]></item>
+		<item name="bash.moderation.disabledComments.noComments"><![CDATA[Currently there are no disabled comments.]]></item>
+		<item name="bash.moderation.disabledComments.serverButton"><![CDATA[Serverdetails]]></item>
+	</category>
+	
+	<!-- group options -->
+	<category name="wcf.acp.group.option">
+		<item name="wcf.acp.group.option.category.user.bash"><![CDATA[Bashentries]]></item>
+		<item name="wcf.acp.group.option.category.user.bash.description"><![CDATA[]]></item>
+		
+		<item name="wcf.acp.group.option.user.bash.canViewBASHOffline"><![CDATA[Can see application in offline mode]]></item>
+		<item name="wcf.acp.group.option.user.bash.canViewBASHOffline.description"><![CDATA[Members of this usergroup can see the application in offline mode.]]></item>
+		<item name="wcf.acp.group.option.user.bash.canAddBashEntry"><![CDATA[Can add entries]]></item>
+		<item name="wcf.acp.group.option.user.bash.canAddBashEntry.description"><![CDATA[Members of this usergroup can add new quotes.]]></item>
+		
+		<item name="wcf.acp.group.option.category.user.comment"><![CDATA[Server Comments]]></item>
+		<item name="wcf.acp.group.option.category.user.comment.description"><![CDATA[]]></item>
+		
+		<item name="wcf.acp.group.option.user.comment.canAddComment"><![CDATA[Cann add comments]]></item>
+		<item name="wcf.acp.group.option.user.comment.canAddComment.description"><![CDATA[Members of this usergroup can comment servers.]]></item>
+		
+		<item name="wcf.acp.group.option.category.mod.bash"><![CDATA[Bash Entries]]></item>
+		<item name="wcf.acp.group.option.category.mod.bash.description"><![CDATA[]]></item>
+		
+		<item name="wcf.acp.group.option.mod.bash.moderatorPermissions"><![CDATA[Can moderate bash entries]]></item>
+		<item name="wcf.acp.group.option.mod.bash.moderatorPermissions.description"><![CDATA[Members of this usergroup can moderate bash entries.]]></item>
+		<item name="wcf.acp.group.option.mod.bash.canAddNewsEntries"><![CDATA[Can add new news entries]]></item>
+		<item name="wcf.acp.group.option.mod.bash.canAddNewsEntries.description"><![CDATA[Members of this usergroup can add new news entries.]]></item>
+		<item name="wcf.acp.group.option.mod.bash.canEditNewsEntries"><![CDATA[Can edit news entries]]></item>
+		<item name="wcf.acp.group.option.mod.bash.canEditNewsEntries.description"><![CDATA[Members of this usergroup cann edit news entries.]]></item>
+		<item name="wcf.acp.group.option.mod.bash.canDeleteNewsEntries"><![CDATA[Can delete news.]]></item>
+		<item name="wcf.acp.group.option.mod.bash.canDeleteNewsEntries.description"><![CDATA[Members of this usergroup can delete news entries]]></item>
+		
+		<item name="wcf.acp.group.option.category.mod.comment"><![CDATA[Server Comments]]></item>
+		<item name="wcf.acp.group.option.category.mod.comment.description"><![CDATA[]]></item>
+		
+		<item name="wcf.acp.group.option.mod.comment.moderatorPermissions"><![CDATA[Can moderate server comments]]></item>
+		<item name="wcf.acp.group.option.mod.comment.moderatorPermissions.description"><![CDATA[Members of this usergroup can moderate server comments.]]></item>
+		
+		<item name="wcf.acp.group.option.category.admin.bash"><![CDATA[Bash Database]]></item>
+		<item name="wcf.acp.group.option.category.admin.bash.description"><![CDATA[]]></item>
+		<item name="wcf.acp.group.option.admin.bash.canAddServers"><![CDATA[Can add servers]]></item>
+		<item name="wcf.acp.group.option.admin.bash.canAddServers.description"><![CDATA[Members of this usergroup can add new servers.]]></item>
+		<item name="wcf.acp.group.option.admin.bash.canDeleteServers"><![CDATA[Can delete servers]]></item>
+		<item name="wcf.acp.group.option.admin.bash.canDeleteServers.description"><![CDATA[Members of this usergroup can remove servers.]]></item>
+	</category>
+	
+	<!-- User profile tabs -->
+	<category name="wcf.user.profile">
+		<item name="wcf.user.profile.menu.link.bash.favorites"><![CDATA[Favorites]]></item>
+		<item name="wcf.user.profile.menu.link.bash.ownEntries"><![CDATA[Entries]]></item>
+	</category>
+	
+	<!-- ADMINISTRATION -->
+	<category name="bash.acp.index">
+		<item name="bash.acp.index"><![CDATA[Bash Database Administration]]></item>
+		<item name="bash.acp.index.credits"><![CDATA[About &raquo;Bash Database&laquo;]]></item>
+		<item name="cms.acp.index.credits"><![CDATA[About Evil-Co.de CMS]]></item>
+		<item name="cms.acp.index.credits.contributor"><![CDATA[Contributor]]></item>
+		<item name="cms.acp.index.credits.designer"><![CDATA[Design]]></item>
+		<item name="cms.acp.index.credits.developedBy"><![CDATA[Software developed by]]></item>
+		<item name="cms.acp.index.credits.developer"><![CDATA[Developer]]></item>
+		<item name="cms.acp.index.credits.productManager"><![CDATA[Projectmanager]]></item>
+		<item name="cms.acp.index.credits.translators"><![CDATA[Translation]]></item>
+		<item name="cms.acp.index.credits.icons"><![CDATA[Iconset]]></item>
+		<item name="bash.acp.index.news"><![CDATA[News]]></item>
+		<item name="bash.acp.index.searchUsers"><![CDATA[Usersearch]]></item>
+		<item name="bash.acp.index.stat"><![CDATA[Statistics]]></item>
+		<item name="bash.acp.index.stat.database.entries"><![CDATA[Databaseentries]]></item>
+		<item name="bash.acp.index.stat.database.size"><![CDATA[Dabasesize]]></item>
+		<item name="bash.acp.index.stat.members"><![CDATA[Members]]></item>
+		<item name="bash.acp.index.stat.entries"><![CDATA[Entries]]></item>
+		<item name="bash.acp.index.stat.usersOnline"><![CDATA[Onlineusers]]></item>
+		<item name="bash.acp.index.system"><![CDATA[System]]></item>
+		<item name="bash.acp.index.system.cache"><![CDATA[Cache]]></item>
+		<item name="bash.acp.index.system.load"><![CDATA[UNIX Load]]></item>
+		<item name="bash.acp.index.system.os"><![CDATA[Operating System]]></item>
+		<item name="bash.acp.index.system.php"><![CDATA[PHP Version]]></item>
+		<item name="bash.acp.index.system.server"><![CDATA[Server]]></item>
+		<item name="bash.acp.index.system.software"><![CDATA[Software]]></item>
+		<item name="bash.acp.index.system.sql.type"><![CDATA[Database]]></item>
+		<item name="bash.acp.index.system.sql.version"><![CDATA[MySQL Version]]></item>
+		<item name="bash.acp.index.system.wcf.version"><![CDATA[Community Framework&trade; Version]]></item>
+		<item name="bash.acp.index.system.webserver"><![CDATA[Webserver]]></item>
+		<item name="bash.acp.index.system.bash.version"><![CDATA[Bash Database Version]]></item>
+		<item name="bash.acp.index.updates"><![CDATA[Updates]]></item>
+		<item name="bash.acp.index.updates.description"><![CDATA[The following updates are available:]]></item>
+		<item name="bash.acp.index.updates.startUpdate"><![CDATA[Start Update]]></item>
+		<item name="bash.acp.index.updates.update"><![CDATA[{$update.packageName}{if $update.instanceNo > 1} (#{$update.instanceNo}){/if} Version {$update.version.packageVersion}]]></item>
+	</category>
+	
+	<category name="bash.acp.newsList">
+		<item name="bash.acp.newsList.title"><![CDATA[List news]]></item>
+		<item name="bash.acp.newsList.add"><![CDATA[Add news]]></item>
+	</category>
+	
+	<category name="bash.acp.serverList">
+		<item name="bash.acp.serverList.title"><![CDATA[List servers]]></item>
+		<item name="bash.acp.serverList.add"><![CDATA[Add server]]></item>
+		<item name="bash.acp.serverList.noEntries"><![CDATA[There are no servers.]]></item>
+		<item name="bash.acp.serverList.delete"><![CDATA[Delete]]></item>
+	</category>
+	
+	<category name="bash.acp.serverAdd">
+		<item name="bash.acp.serverAdd.title"><![CDATA[Add server]]></item>
+		<item name="bash.acp.serverAdd.information"><![CDATA[Information]]></item>
+		<item name="bash.acp.serverAdd.serverName"><![CDATA[Adress]]></item>
+		<item name="bash.acp.serverAdd.serverPort"><![CDATA[Port]]></item>
+		<item name="bash.acp.serverAdd.serverDescription"><![CDATA[Description]]></item>
+		<item name="bash.acp.serverAdd.success"><![CDATA[The server was added successfully.]]></item>
+	</category>
+	
+	<!-- ACPMenu -->
+	<category name="bash.acp.menu">
+		<item name="bash.acp.menu.link.content.servers"><![CDATA[Server]]></item>
+		<item name="bash.acp.menu.link.content.servers.list"><![CDATA[List servers]]></item>
+		<item name="bash.acp.menu.link.content.servers.add"><![CDATA[Add server]]></item>
+	</category>
+</language>
