@@ -2,7 +2,7 @@
 <!DOCTYPE package SYSTEM "http://www.woltlab.com/DTDs/package.dtd">
 <package name="de.evil-co.bash">
 	<packageinformation>
-		<packagename><![CDATA[Punk Bash]]></packagename>
+		<packagename><![CDATA[Bash Database]]></packagename>
 		<packagedescription><![CDATA[]]>
 		</packagedescription>
 		<standalone>1</standalone>
