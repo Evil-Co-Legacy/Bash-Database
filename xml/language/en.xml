@@ -73,8 +73,8 @@
 
 	<category name="bash.page.random">
 		<item name="bash.page.random.title"><![CDATA[Random entries]]></item>
-		<item name="bash.page.random.messageHeader"><![CDATA[Netzwerk: {if $entry->serverID > 0}<a href="index.php?page=ServerDetail&serverID={$entry->serverID}">{$entry->serverName}</a>{else}{$entry->serverName}{/if} - Bewertung: {#$entry->votes} - {@$entry->timestamp|time}]]></item>
-		<item name="bash.page.random.noEntries"><![CDATA[Huch?! Wieso sind hier keine Einträge?! Versuchs später nochmal ;-)]]></item> <!-- Little easteregg -->
+		<item name="bash.page.random.messageHeader"><![CDATA[Network: {if $entry->serverID > 0}<a href="index.php?page=ServerDetail&serverID={$entry->serverID}">{$entry->serverName}</a>{else}{$entry->serverName}{/if} - Bewertung: {#$entry->votes} - {@$entry->timestamp|time}]]></item>
+		<item name="bash.page.random.noEntries"><![CDATA[What the Hell?! We haven't got entries?!]]></item> <!-- Little easteregg -->
 	</category>
 
 	<category name="bash.page.bash">
