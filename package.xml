@@ -70,5 +70,6 @@
 
 		<!-- Languages -->
 		<languages languagecode="de">xml/language/de.xml</languages>
+		<languages languagecode="de-informal">xml/language/de-informal.xml</languages>
 	</instructions>
 </package>
