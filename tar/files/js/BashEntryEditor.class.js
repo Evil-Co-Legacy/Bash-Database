@@ -20,6 +20,7 @@ var BashEntryEditor = {
 		},
 		
 		remove					:			function(entryID) {
-			
+			$j.ajax({url: 'index.php?action=BashEntryDelete&ajax=1&entryID='+entryID+SID_ARG_2ND });
+			$('entry' + entryID + 'Container').fade();
 		}
 };
