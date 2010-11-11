@@ -1,6 +1,7 @@
 {include file='documentHeader'}
 	<head>
 		<title>{lang}bash.page.random.title{/lang} - {PAGE_TITLE}</title>
+		
 		{include file='headInclude'}
 	</head>
 	<body id="{if $templateName|isset}tpl{$templateName|ucfirst}{/if}">
