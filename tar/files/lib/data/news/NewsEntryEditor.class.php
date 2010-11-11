@@ -41,6 +41,10 @@ class NewsEntryEditor extends NewsEntry {
 		return $entry;
 	}
 	
+	/**
+	 * Removes a entry row
+	 * @param	integer	$entryID
+	 */
 	public static function remove($entryID) {
 		$sql = "DELETE FROM bash".BASH_N."_news
 				WHERE
