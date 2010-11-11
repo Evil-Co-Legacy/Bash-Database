@@ -1,6 +1,6 @@
 {assign var=isFavorite value=$entry->isFavorite()}
 
-<div class="message{if $entry->isDisabled} disabled{/if}">
+<div class="message{if $entry->isDisabled} disabled{/if}" id="entry{@$entry->entryID}Container">
 	<div class="messageInner message{if $this->getStyle()->getVariable('messages.framed')}Framed{/if}{@$this->getStyle()->getVariable('messages.sidebar.alignment')|ucfirst} container-{cycle name=entryCycle}">
 		<a id="entry{@$entry->entryID}"></a>
 
