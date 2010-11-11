@@ -37,7 +37,7 @@
 
 	<!-- Frontend header -->
 	<category name="bash.header">
-		<item name="bash.header.userNote.user"><![CDATA[Sie sind als <a href="index.php?page=User&userID={$this->user->userID}">{$this->user->username}</a> angemeldet.]]></item>
+		<item name="bash.header.userNote.user"><![CDATA[Angemeldet als <a href="index.php?page=User&userID={$this->user->userID}">{$this->user->username}</a>.]]></item>
 		<item name="bash.header.userNote.guest"><![CDATA[Sie sind nicht angemeldet.]]></item>
 
 		<item name="bash.header.userMenu.logout"><![CDATA[Abmelden]]></item>
