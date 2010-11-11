@@ -2,14 +2,6 @@
 	<head>
 		<title>{lang}bash.page.index.title{/lang} - {PAGE_TITLE}</title>
 		{include file='headInclude'}
-		{if $this->user->getPermission('mod.bash.canEditNewsEntries')}
-			<script type="text/javascript">
-				function createNewsInlineEditor(entryID) {
-					new Ajax.InPlaceEditor('entryText'+entryID, 'index.php?action=AjaxEditNewsEntry&entryID='+entryID);
-					new Ajax.InPlaceEditor('newsTopic'+entryID, 'index.php?action=AjaxEditNewsEntry&entryID='+entryID+'&type=subject');
-				}
-			</script>
-		{/if}
 	</head>
 	<body id="{if $templateName|isset}tpl{$templateName|ucfirst}{/if}">
 		{include file='header' sandbox=false}
@@ -108,12 +100,6 @@
 								</div>
 						    </div>
 					    </div>
-						
-						{if $this->user->getPermission('mod.bash.canEditNewsEntries')}
-							<script type="text/javascript">
-								createNewsInlineEditor('{$entry->entryID}');
-							</script>
-					    {/if}
 						
 					    {assign var="startIndex" value=$startIndex + 1}
 			    	{/foreach}
