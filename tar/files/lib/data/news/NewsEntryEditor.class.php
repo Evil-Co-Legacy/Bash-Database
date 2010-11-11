@@ -16,18 +16,24 @@ class NewsEntryEditor extends NewsEntry {
 	 * @param	string	$serverName
 	 * @param	string	$text
 	 */
-	public static function create($authorID, $authorName, $subject, $text, $timestamp) {
+	public static function create($authorID, $authorName, $subject, $text, $timestamp, $enableSmilies = true, $enableHTML = false, $enableBBCodes = true) {
 		$sql = "INSERT INTO bash".BASH_N."_news
 					(`authorID`, 
 					 `authorName`, 
 					 `subject`,
 					 `text`,
-					 `timestamp`)
+					 `timestamp`,
+					 `enableSmilies`,
+					 `enableHTML`,
+					 `enableBBCodes`)
 				VALUES (".$authorID.",
 						'".escapeString($authorName)."',
 						'".escapeString($subject)."',
 						'".escapeString($text)."',
-						".$timestamp.");";
+						".$timestamp.",
+						".($enableSmilies ? 1 : 0).",
+						".($enableHTML ? 1 : 0).",
+						".($enableBBCodes ? 1 : 0).");";
 		WCF::getDB()->sendQuery($sql);
 		
 		$entry = new NewsEntry(WCF::getDB()->getInsertID());
