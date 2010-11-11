@@ -21,7 +21,10 @@ CREATE TABLE `bash1_1_news` (
 	`authorName` VARCHAR (255) NOT NULL,
 	`subject` VARCHAR (255) NOT NULL,
 	`text` TEXT NOT NULL,
-	`timestamp` INT NOT NULL
+	`timestamp` INT NOT NULL,
+	`enableSmilies` TINYINT (1) NOT NULL DEFAULT '1',
+	`enableHTML` TINYINT (1) NOT NULL DEFAULT '0',
+	`enableBBCodes` TINYINT (1) NOT NULL DEFAULT '1'
 );
 
 DROP TABLE IF EXISTS `bash1_1_favorite`;
