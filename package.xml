@@ -64,12 +64,12 @@
 		<groupoptions>xml/groupoptions.xml</groupoptions>
 		<userprofilemenu>xml/userprofilemenu.xml</userprofilemenu>
 		
-
 		<!-- Other PiPs -->
 		<sql>install.sql</sql>
 
 		<!-- Languages -->
 		<languages languagecode="de">xml/language/de.xml</languages>
 		<languages languagecode="de-informal">xml/language/de-informal.xml</languages>
+		<languages languagecode="en">xml/language/en.xml</languages>
 	</instructions>
 </package>
