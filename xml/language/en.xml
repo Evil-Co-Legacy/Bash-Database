@@ -107,6 +107,7 @@
 		<item name="bash.page.bashEntryAdd.serverID.own"><![CDATA[Custom Server]]></item>
 		<item name="bash.page.bashEntryAdd.serverName"><![CDATA[Server Adress]]></item>
 		<item name="bash.page.bashEntryAdd.text"><![CDATA[Quote]]></item>
+		<item name="bash.page.bashEntryAdd.guestRedirect"><![CDATA[Thank you for your quote!<br />You'll be redirected to index because you haven't logged in.]]></item>
 	</category>
 	
 	<category name="bash.page.newsAdd">

@@ -107,6 +107,7 @@
 		<item name="bash.page.bashEntryAdd.serverID.own"><![CDATA[Benutzerdefinierter Server]]></item>
 		<item name="bash.page.bashEntryAdd.serverName"><![CDATA[Server Adresse]]></item>
 		<item name="bash.page.bashEntryAdd.text"><![CDATA[Zitat]]></item>
+		<item name="bash.page.bashEntryAdd.guestRedirect"><![CDATA[Danke für Dein Zitat!<br />Da Du nicht eingeloggt bist kannst Du nicht den Status Deines Zitates abrufen. Du wirst auf die Startseite weitergeleitet.]]></item>
 	</category>
 	
 	<category name="bash.page.newsAdd">
