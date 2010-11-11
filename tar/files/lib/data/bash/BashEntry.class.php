@@ -69,9 +69,9 @@ class BashEntry extends DatabaseObject {
 	 * @return	 string
 	 */
 	public function getFormatedText() {
-		require_once(WCF_DIR.'lib/data/message/bbcode/SimpleMessageParser.class.php');
-		$parser = SimpleMessageParser::getInstance();
-		return $parser->parse($this->text);
+		require_once(WCF_DIR.'lib/data/message/bbcode/MessageParser.class.php');
+		$parser = MessageParser::getInstance();
+		return $parser->parse($this->text, $this->enableSmilies, $this->enableHTML, $this->enableBBCodes);
 	}
 	
 	/**
