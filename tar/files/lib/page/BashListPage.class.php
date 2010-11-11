@@ -52,8 +52,11 @@ class RandomPage extends MultipleLinkPage {
     public function countItems() {
 		parent::countItems();
 	
-		$sql = "SELECT	COUNT(*)
-				FROM	bash".BASH_N."_entry"
+		$sql = "SELECT	COUNT(*) AS count
+				FROM	bash".BASH_N."_entry";
+		$row = WCF::getDB()->getFirstRow($sql);
+		
+		return $row['count'];
     }
 	
 	public function assignVariables() {
