@@ -8,7 +8,7 @@
 		<item name="bash.global.permalink"><![CDATA[Permalink zu Eintrag {#$entry->entryID}]]></item>
 
 		<item name="bash.global.changeStyle"><![CDATA[Stil wechseln]]></item>
-		<item name="bash.global.copyright"><![CDATA[<a href="http://www.Punksoft.net/"><strong>Datenbanksoftware:</strong> PunkBash {PACKAGE_VERSION} entwickelt von Punksoft</a>]]></item>
+		<item name="bash.global.copyright"><![CDATA[<a href="http://www.evil-co.de/"><strong>Datenbanksoftware:</strong> Bash Database {PACKAGE_VERSION} entwickelt von Evil-Co.de</a>]]></item>
 	</category>
 
 	<!-- Bash entry variables -->
@@ -205,7 +205,7 @@
 		<item name="wcf.acp.group.option.mod.comment.moderatorPermissions"><![CDATA[Kann Server Kommentare moderieren]]></item>
 		<item name="wcf.acp.group.option.mod.comment.moderatorPermissions.description"><![CDATA[Mitglieder dieser Benutzergruppe können Server Kommentare moderieren (Löschen, Freischalten, etc.).]]></item>
 		
-		<item name="wcf.acp.group.option.category.admin.bash"><![CDATA[PunkBash]]></item>
+		<item name="wcf.acp.group.option.category.admin.bash"><![CDATA[Bash Database]]></item>
 		<item name="wcf.acp.group.option.category.admin.bash.description"><![CDATA[]]></item>
 		<item name="wcf.acp.group.option.admin.bash.canAddServers"><![CDATA[Kann Server hinzufügen]]></item>
 		<item name="wcf.acp.group.option.admin.bash.canAddServers.description"><![CDATA[Mitglieder dieser Benutzergruppe können neue Server hinzufügen.]]></item>
@@ -221,8 +221,8 @@
 	
 	<!-- ADMINISTRATION -->
 	<category name="bash.acp.index">
-		<item name="bash.acp.index"><![CDATA[PunkBash Administrationsoberfläche]]></item>
-		<item name="bash.acp.index.credits"><![CDATA[Über PunkBash]]></item>
+		<item name="bash.acp.index"><![CDATA[Bash Database Administrationsoberfläche]]></item>
+		<item name="bash.acp.index.credits"><![CDATA[Über &raquo;Bash Database&laquo;]]></item>
 		<item name="bash.acp.index.credits.contributor"><![CDATA[Mitwirkende]]></item>
 		<item name="bash.acp.index.credits.designer"><![CDATA[Design]]></item>
 		<item name="bash.acp.index.credits.developedBy"><![CDATA[Software entwickelt von]]></item>
@@ -248,7 +248,7 @@
 		<item name="bash.acp.index.system.sql.version"><![CDATA[MySQL Version]]></item>
 		<item name="bash.acp.index.system.wcf.version"><![CDATA[Community Framework&trade; Version]]></item>
 		<item name="bash.acp.index.system.webserver"><![CDATA[Webserver]]></item>
-		<item name="bash.acp.index.system.bash.version"><![CDATA[PunkBash Version]]></item>
+		<item name="bash.acp.index.system.bash.version"><![CDATA[Bash Database Version]]></item>
 		<item name="bash.acp.index.updates"><![CDATA[Updates]]></item>
 		<item name="bash.acp.index.updates.description"><![CDATA[Es stehen derzeit folgende Updates zur Verfügung:]]></item>
 		<item name="bash.acp.index.updates.startUpdate"><![CDATA[Update jetzt durchführen]]></item>
