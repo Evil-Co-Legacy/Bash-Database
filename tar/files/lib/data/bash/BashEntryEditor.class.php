@@ -16,20 +16,26 @@ class BashEntryEditor extends BashEntry {
 	 * @param	string	$serverName
 	 * @param	string	$text
 	 */
-	public static function create($authorID, $authorName, $serverID, $serverName, $text, $timestamp) {
+	public static function create($authorID, $authorName, $serverID, $serverName, $text, $timestamp, $enableSmilies = true, $enableHTML = false, $enableBBCodes = true) {
 		$sql = "INSERT INTO bash".BASH_N."_entry
 					(`authorID`, 
 					 `authorName`, 
 					 `serverID`, 
 					 `serverName`, 
 					 `text`,
-					 `timestamp`)
+					 `timestamp`,
+					 `enableSmilies`,
+					 `enableHTML`,
+					 `enableBBCodes`)
 				VALUES (".$authorID.",
 						'".escapeString($authorName)."',
 						".$serverID.",
 						'".escapeString($serverName)."',
 						'".escapeString($text)."',
-						".$timestamp.");";
+						".$timestamp.",
+						".($enableSmilies ? 1 : 0).",
+						".($enableHTML ? 1 : 0).",
+						".($enableBBCodes ? 1 : 0).");";
 		WCF::getDB()->sendQuery($sql);
 		
 		$entry = new BashEntry(WCF::getDB()->getInsertID());
