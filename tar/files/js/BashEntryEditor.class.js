@@ -41,5 +41,29 @@ var BashEntryEditor = {
 					Effect.Shake('entry' + entryID + 'Container');
 				}
 			});
+		},
+		
+		favorite				:			function(entryID) {
+			$j.ajax({
+				url: 'index.php?action=FavoriteAdd&ajax=1&entryID='+entryID+SID_ARG_2ND,
+				success: function() {
+					$('favorite' + entryID).fade();
+				},
+				error: function() {
+					Effect.Shake('favorite' + entryID);
+				}
+			});
+		},
+		
+		unFavorite				:			function(entryID) {
+			$j.ajax({
+				url: 'index.php?action=FavoriteRemove&ajax=1&entryID='+entryID+SID_ARG_2ND,
+				success: function() {
+					$('favorite' + entryID).fade();
+				},
+				error: function() {
+					Effect.Shake('favorite' + entryID);
+				}
+			});
 		}
 };
