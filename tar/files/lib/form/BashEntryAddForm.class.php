@@ -158,7 +158,18 @@ class BashEntryAddForm extends MessageForm {
 			UserRank::updateActivityPoints(BASH_USER_ACTIVITY_POINTS);
 		}
 		
-		HeaderUtil::redirect('index.php?page=BashEntry&entryID='.$entry->entryID.SID_ARG_2ND_NOT_ENCODED);
+		if (WCF::getUser()->userID > 0)
+			HeaderUtil::redirect('index.php?page=BashEntry&entryID='.$entry->entryID.SID_ARG_2ND_NOT_ENCODED);
+		else {
+			// redirect to index
+			WCF::getTPL()->assign(array(
+				'url' => 'index.php'.SID_ARG_1ST,
+				'message' => WCF::getLanguage()->get('bash.page.bashEntryAdd.guestRedirect'),
+				'wait' => 10
+			));
+			WCF::getTPL()->display('redirect');
+			exit;
+		}
 		
 		// call event
 		$this->saved();
