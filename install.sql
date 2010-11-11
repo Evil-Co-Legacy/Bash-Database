@@ -8,7 +8,10 @@ CREATE TABLE `bash1_1_entry` (
 	`text` TEXT NOT NULL,
 	`votes` INT NOT NULL DEFAULT '0',
 	`timestamp` INT NOT NULL,
-	`isDisabled` TINYINT (1) NOT NULL DEFAULT '1'
+	`isDisabled` TINYINT (1) NOT NULL DEFAULT '1',
+	`enableSmilies` TINYINT (1) NOT NULL DEFAULT '1',
+	`enableHTML` TINYINT (1) NOT NULL DEFAULT '0',
+	`enableBBCodes` TINYINT (1) NOT NULL DEFAULT '1'
 );
 
 DROP TABLE IF EXISTS `bash1_1_news`;
