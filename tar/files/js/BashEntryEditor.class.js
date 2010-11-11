@@ -41,5 +41,5 @@ var BashEntryEditor = {
 					Effect.Shake('entry' + entryID + 'Container');
 				}
 			});
-		},
+		}
 };
