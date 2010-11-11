@@ -6,20 +6,41 @@ require_once(WCF_DIR.'lib/data/message/sidebar/MessageSidebarFactory.class.php')
 // bash imports
 require_once(BASH_DIR.'lib/data/bash/ViewableBashEntry.class.php');
 
-class RandomPage extends MultipleLinkPage {
-	public $templateName = 'random';
+/**
+ * Implements a page that lists all available bash entries
+ * @author		Johannes Donath
+ * @copyright	2010 DEVel Fusion
+ * @package		de.evil-co.bash
+ */
+class BashListPage extends MultipleLinkPage {
 	
+	/**
+	 * @see	AbstractPage::$templateName
+	 */
+	public $templateName = 'bashList';
+	
+	/**
+	 * Contains the sidebar factory
+	 * @var	MessageSidebarFactory
+	 */
 	public $sidebarFactory = null;
 	
+	/**
+	 * Contains all bash entries
+	 * @var	array<ViewableBashEntry>
+	 */
 	public $entries = array();
 	
+	/**
+	 * @see	Page::readData()
+	 */
 	public function readData() {
 		parent::readData();
 		
 		$sql = "SELECT
 			    	*
 				FROM
-			   		`bash".BASH_N."_entry`".((BASHCore::getUser()->userID == 0 or (!BASHCore::getUser()->isModerator())) ? ' WHERE `isDisabled` = 0 ' : '')."
+			   		`bash".BASH_N."_entry`".(!BASHCore::getUser()->isModerator() ? ' WHERE `isDisabled` = 0 ' : '')."
 				ORDER BY
 			    	RAND()
 			    LIMIT 10";
@@ -37,7 +58,7 @@ class RandomPage extends MultipleLinkPage {
 	}
 	
 	/**
-	 * 
+	 * @see	Page::show()
 	 */
 	public function show() {
 		require_once(WCF_DIR.'lib/page/util/menu/PageMenu.class.php');
@@ -59,6 +80,9 @@ class RandomPage extends MultipleLinkPage {
 		return $row['count'];
     }
 	
+    /**
+     * @see	Page::assignVariables()
+     */
 	public function assignVariables() {
 		parent::assignVariables();
 		
