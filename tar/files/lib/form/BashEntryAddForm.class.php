@@ -151,7 +151,7 @@ class BashEntryAddForm extends MessageForm {
 	public function save() {
 		parent::save();
 		
-		$entry = BashEntryEditor::create(BASHCore::getUser()->userID, $this->username, $this->serverID, $this->serverName, $this->text, TIME_NOW, $this->enableSmilies, $this->enableHTML, $this->enableBBCodes);
+		$entry = BashEntryEditor::create(BASHCore::getUser()->userID, $this->username, $this->serverID, $this->serverName, $this->text, TIME_NOW, $this->enableSmilies, $this->enableHtml, $this->enableBBCodes);
 		
 		if (MODULE_USER_RANK and BASHCore::getUser()->userID > 0) {
 			require_once(WCF_DIR.'lib/data/user/rank/UserRank.class.php');
