@@ -67,7 +67,6 @@
 
 		<!-- Other PiPs -->
 		<sql>install.sql</sql>
-		<style default="true">tar/antarctica-bulletin-board-no-logo-style.tgz</style>
 
 		<!-- Languages -->
 		<languages languagecode="de">xml/language/de.xml</languages>
