@@ -100,7 +100,7 @@ class NewsAddForm extends MessageForm {
 	public function save() {
 		parent::save();
 		
-		$entry = NewsEntryEditor::create(WCF::getUser()->userID, $this->username, $this->subject, $this->text, TIME_NOW);
+		$entry = NewsEntryEditor::create(WCF::getUser()->userID, $this->username, $this->subject, $this->text, TIME_NOW, $this->enableSmilies, $this->enableHTML, $this->enableBBCodes);
 		
 		HeaderUtil::redirect('index.php?page=Index'.SID_ARG_2ND_NOT_ENCODED.'#entry'.$entry->entryID);
 		
