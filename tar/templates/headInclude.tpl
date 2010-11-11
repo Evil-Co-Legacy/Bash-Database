@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=8" />
 {if !$allowSpidersToIndexThisPage|isset}<meta name="robots" content="noindex,nofollow" />{/if}
 
-<script type="text/javascript" src="{@RELATIVE_BASH_DIR}js/3rdParty/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="{@RELATIVE_BASH_DIR}js/3rdParty/jquery-1.4.3.min.js"></script>
 <script type="text/javascript">
 	window.$j = jQuery.noConflict();
 </script>
