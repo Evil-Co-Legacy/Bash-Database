@@ -23,5 +23,11 @@
 			<position>header</position>
 			<permissions>user.bash.canAddBashEntry</permissions>
 		</pagemenuitem>
+		<pagemenuitem name="bash.header.menu.bashList">
+			<iconmedium>indexM.png</iconmedium>
+			<iconsmall>indexS.png</iconsmall>
+			<link>index.php?page=BashList</link>
+			<position>footer</position>
+		</pagemenuitem>
 	</import>
 </data>
