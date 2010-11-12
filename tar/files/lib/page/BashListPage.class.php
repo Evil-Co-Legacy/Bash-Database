@@ -42,9 +42,8 @@ class BashListPage extends MultipleLinkPage {
 				FROM
 			   		`bash".BASH_N."_entry`".(!BASHCore::getUser()->isModerator() ? ' WHERE `isDisabled` = 0 ' : '')."
 				ORDER BY
-			    	RAND()
-			    LIMIT 10";
-		$result = WCF::getDB()->sendQuery($sql);
+			    	timestamp DESC";
+		$result = WCF::getDB()->sendQuery($sql, $this->itemsPerPage, ($this->pageNo - 1) * $this->itemsPerPage);
 		while ($row = WCF::getDB()->fetchArray($result)) {
 		    $this->entries[] = new ViewableBashEntry(null, $row);
 		}
