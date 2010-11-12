@@ -9,7 +9,7 @@ class NewsEditForm extends MessageForm {
 	public $templateName = 'newsEdit';
 	public $useCaptcha = true;
 	public $showSmilies = true;
-	public $showSettings = false;
+	public $showSettings = true;
 	public $showAttachments = false;
 	public $showPoll = false;
 	public $showSignatureSetting = false;
@@ -32,6 +32,10 @@ class NewsEditForm extends MessageForm {
 		
 		$this->subject = $this->entry->subject;
 		$this->text = $this->entry->text;
+		
+		$this->enableSmilies = $this->entry->enableSmilies;
+		$this->enableHtml = $this->entry->enableHtml;
+		$this->enableBBCodes = $this->entry->enableBBCodes;
 	}
 	
 	public function save() {
