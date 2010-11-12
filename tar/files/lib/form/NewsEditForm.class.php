@@ -39,6 +39,11 @@ class NewsEditForm extends MessageForm {
 		
 		$this->entry->subject = $this->subject;
 		$this->entry->text = $this->text;
+		
+		$this->entry->enableSmilies = $this->enableSmilies;
+		$this->entry->enableHTML = $this->enableHtml;
+		$this->entry->enableBBCodes = $this->enableBBCodes;
+		
 		$this->entry->update();
 		
 		HeaderUtil::redirect('index.php?page=Index'.SID_ARG_2ND_NOT_ENCODED.'#entry'.$this->entry->entryID);
