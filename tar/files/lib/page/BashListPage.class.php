@@ -40,7 +40,7 @@ class BashListPage extends MultipleLinkPage {
 		$sql = "SELECT
 			    	*
 				FROM
-			   		`bash".BASH_N."_entry`".(!BASHCore::getUser()->isModerator() ? ' WHERE `isDisabled` = 0 ' : '')."
+			   		`bash".BASH_N."_entry`".(BASHCore::getUser()->isModerator() ? '' :  'WHERE `isDisabled` = 0 ')."
 				ORDER BY
 			    	timestamp DESC";
 		$result = WCF::getDB()->sendQuery($sql, $this->itemsPerPage, ($this->pageNo - 1) * $this->itemsPerPage);
@@ -61,7 +61,7 @@ class BashListPage extends MultipleLinkPage {
 	 */
 	public function show() {
 		require_once(WCF_DIR.'lib/page/util/menu/PageMenu.class.php');
-		if (PageMenu::getActiveMenuItem() == '') PageMenu::setActiveMenuItem('bash.header.menu.random');
+		if (PageMenu::getActiveMenuItem() == '') PageMenu::setActiveMenuItem('bash.header.menu.bashList');
 		
 		parent::show();
 	}
