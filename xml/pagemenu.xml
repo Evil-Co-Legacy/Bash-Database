@@ -29,5 +29,11 @@
 			<link>index.php?page=BashList</link>
 			<position>footer</position>
 		</pagemenuitem>
+		<pagemenuitem name="bash.header.menu.bestBashEntries">
+			<iconmedium>indexM.png</iconmedium>
+			<iconsmall>indexS.png</iconsmall>
+			<link>index.php?page=BashestBashEntries</link>
+			<position>footer</position>
+		</pagemenuitem>
 	</import>
 </data>
